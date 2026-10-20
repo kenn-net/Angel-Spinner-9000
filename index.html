@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angel Spinner 9000 🎉</title>
+<link rel="stylesheet" href="style_coffee.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">A little game for the birthday angel</div>
+  <h1>Angel Spinner 9000 <span aria-hidden="true">🎉</span></h1>
+  <p class="subtitle">Three reels. A little luck. A tiny game to celebrate your special day. Happy Birthday!!!</p>
+</header>
+
+<section class="panel">
+  <div class="topstats">
+    <div class="stat"><b id="spins">3</b><span>spins left today</span></div>
+    <div class="stat"><b id="points">0</b><span>friend points</span></div>
+    <div class="stat"><b id="wins">0</b><span>prizes won</span></div>
+  </div>
+  <div class="machine">
+    <p class="machine-title">✦ THE SLOT MACHINE ✦</p>
+    <div class="reels" aria-label="Slot machine reels">
+      <div class="reel" id="r0">❤️</div><div class="reel" id="r1">🌹</div><div class="reel" id="r2">⭐</div>
+    </div>
+    <div class="spinrow">
+      <button class="primary" id="spinBtn">SPIN FOR FUN ✨</button>
+      <button class="secondary" id="resetBtn" title="Reset the game from the start">Reset Game</button>
+    </div>
+  </div>
+  <div class="result" aria-live="polite">
+    <h2 id="resultTitle">Ready, little angel?</h2>
+    <p id="resultText">Tap spin and see what your fortune has in store! 🍀</p>
+  </div>
+</section>
+
+<section class="panel">
+  <h2 class="section-title">🎀 Meet the symbols</h2>
+  <div class="symbol-grid">
+    <div class="symbol"><span class="emoji">❤️</span><b>Heart</b><small>Friendly activity</small></div>
+    <div class="symbol"><span class="emoji">🌹</span><b>Rose</b><small>Kind words &amp; appreciation</small></div>
+    <div class="symbol"><span class="emoji">⭐</span><b>Star</b><small>Bonus spin</small></div>
+    <div class="symbol"><span class="emoji">🍒</span><b>Cherries</b><small>Funny photo or selfie</small></div>
+    <div class="symbol"><span class="emoji">☕</span><b>Coffee</b><small>Yummy drink treat</small></div>
+    <div class="symbol"><span class="emoji">💎</span><b>Diamond</b><small>Mystery prize</small></div>
+    <div class="symbol"><span class="emoji">💌</span><b>Appreciation Note</b><small>Appreciation message</small></div>
+    <div class="symbol"><span class="emoji">🧸</span><b>Teddy Bear</b><small>Stuffed toy</small></div>
+    <div class="symbol"><span class="emoji">🎀</span><b>Ribbon</b><small>Practical present</small></div>
+  </div>
+  <p class="small">Odds: each of the 9 symbols has an equal chance on each reel. Any specific triple has a 1 in 729 chance (about 0.14%); any triple, altogether, happens about 1.23% of the time. Exactly one matching pair happens about 29.63% of the time. No matching symbols happens about 69.14% of the time.</p>
+</section>
+
+<section class="panel">
+  <h2 class="section-title">🏆 Prize tiers</h2>
+  <div class="prizes">
+    <div class="prize"><b>✨ No match — Friendly consolation</b><p>+1 Friend Point and a random little compliment. Every spin wins something.</p></div>
+    <div class="prize"><b>🎉 One pair — Friendly win</b><p>+5 Friend Points and a personalized compliment.</p></div>
+    <div class="prize"><b>🍒🍒🍒 Three cherries</b><p>+10 points and a funny selfie of me.</p></div>
+    <div class="prize"><b>⭐⭐⭐ Three stars</b><p>+10 points and one bonus spin. Bonus spins are capped at 2 per day.</p></div>
+    <div class="prize"><b>🌹🌹🌹 Three roses</b><p>+15 points and a heartfelt appreciation message from me.</p></div>
+    <div class="prize"><b>🧸🧸🧸 Three teddy bears</b><p>+15 points and a stuffed toy that reminds me of you.</p></div>
+    <div class="prize"><b>☕☕☕ Three coffees</b><p>+15 points and a treat of any drink of your choice.</p></div>
+    <div class="prize"><b>💌💌💌 Three appreciation notes</b><p>+15 points and a voice note to remind you that you’re appreciated.</p></div>
+    <div class="prize"><b>🎀🎀🎀 Three ribbons</b><p>+20 points and I get you a practical present.</p></div>
+    <div class="prize"><b>❤️❤️❤️ Three hearts</b><p>+25 points and we do a friendly activity.</p></div>
+    <div class="prize"><b>💎💎💎 Three diamonds</b><p>Jackpot: +50 points and a surprise prize!</p></div>
+  </div>
+  <p class="small">Every reward is a little way to remind you that you’re appreciated. When you win, we’ll figure out the details together and make it something you’ll genuinely enjoy.</p>
+</section>
+
+<section class="panel">
+  <h2 class="section-title">🎁 Friend Point Shop</h2>
+  <p class="small">Save points from spins and redeem a little treat. Redeeming a reward doesn’t use up your daily spins.</p>
+  <div class="progress"><div id="progressBar"></div></div>
+  <p class="small" id="progressText">Earn points to unlock a treat.</p>
+  <div class="redeem"><div><b>10 points · Poem</b><small>A simple poem about you.</small></div><button class="secondary" data-cost="10" data-prize="Poem">Redeem</button></div>
+  <div class="redeem"><div><b>20 points · Grocery run</b><small>I can buy you your groceries.</small></div><button class="secondary" data-cost="20" data-prize="Grocery run">Redeem</button></div>
+  <div class="redeem"><div><b>35 points · Friendly hangout</b><small>Movie night, game night, or an activity you or I choose.</small></div><button class="secondary" data-cost="35" data-prize="Friend hangout">Redeem</button></div>
+  <div class="redeem"><div><b>50 points · ???</b><small>Something you might like.</small></div><button class="secondary" data-cost="50" data-prize="Secret">Redeem</button></div>
+</section>
+
+<section class="panel">
+  <h2 class="section-title">📜 House rules</h2>
+  <ol class="rules">
+    <li>Three free spins reset each day; up to two bonus spins can be earned daily.</li>
+    <li>Every spin grants at least one Friend Point, so there are no true losing spins.</li>
+    <li>Rewards already won are never taken away. Bonus spins cannot stack beyond the daily cap.</li>
+    <li>Do not click the reset button! It will reset your game progress.</li>
+  </ol>
+</section>
+<footer>Made for an adorable friend..</footer>
+</div>
+<script src="script3.js" defer></script>
+</body>
+</html>
